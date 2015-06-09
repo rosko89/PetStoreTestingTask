@@ -1,0 +1,18 @@
+body {
+    background-color: #f0e1fe;
+}
+
+a {
+    color: orange;
+    text-align: center;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    horizontal-alignment: center;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+}
