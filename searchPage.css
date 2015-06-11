@@ -1,0 +1,22 @@
+
+.navbar{
+background-color:pink;
+}
+
+h1{
+font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+a{
+color:white;}
+
+.btn{
+background-color:pink;
+border-color:pink;
+}
+
+.btn:hover
+{
+border-color:pink;
+background-color:pink;
+}
