@@ -1,0 +1,8 @@
+{
+	"dog": "Akita,Beauceron,Bohemian Shepherd,Czechoslovakian Wolfdog,Doberman Pinscher,German Shepherd,Great Dane,Yorkshire Terrier",
+	"cat": "Persian cat,Russian Blue,Siamese cat,Siberian cat,Siberian cat,Sphynx cat,Traditional Persian",
+	"fish": "Angelfish,Bala Shark,Cherry Barb,Guppy,Koi,Long-Fin Swordtail,Montezuma Swordtail,Ocellate River Stingray,Porthole Catfish,Swordtail,",
+	"reptile": "Crocodile,Iguana,Lizard,Snake,Turtle",
+	"rodent": "Chinchillas,Guinea Pigs,Hamsters,Mice,Rabit",
+	"other": "QQ"
+}
