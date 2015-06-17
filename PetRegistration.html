@@ -57,6 +57,9 @@ Released under the MIT license: http://jsbin.mit-license.org
           case 'reptile':
           vals = data.reptile.split(",");
           break;
+          case 'insect':
+          vals = data.insect.split(",");
+          break;
           case 'rodent':
           vals = data.rodent.split(",");
           break;
@@ -126,6 +129,7 @@ Released under the MIT license: http://jsbin.mit-license.org
               <option value="cat">Cat</option>
               <option value="fish">Fish</option>
               <option value="reptile">Reptile</option>
+              <option value="insect">insect</option>
               <option value="rodent">Rodent</option>
               <option value="other">Other</option>
             </select>
@@ -140,6 +144,27 @@ Released under the MIT license: http://jsbin.mit-license.org
             </select>
           </div>
         </div>
+      
+        <!-- Sub-options -->
+    <form>
+      <fieldset>
+          <label class="col-lg-3 control-label">Pet Gender</label>            
+          <input type = "radio"
+                 name = "radSize"
+                 id = "sizeMale"
+                 value = "Male"
+                 checked = "checked" />
+          <label for = "sizeMale">Male</label>
+        </br>
+          <input type = "radio"
+                 name = "radSize"
+                 id = "sizeFemale"
+                 value = "Female" />
+          <label for = "sizeFemale">Female</label>
+     </fieldset>     
+    </form>
+  </br>
+
         <!-- Pet Owner -->
         <div class="form-group">
           <label for="inputPet Owner" class="col-lg-3 control-label">Pet Owner</label>
