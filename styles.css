@@ -1,18 +1,42 @@
-body {
-    background-color: #f0e1fe;
+
+.slides{transform:translate(55%,2%);
+height:450px;
+width:410px;
+ margin: 30px;
+  opacity: 0.7;
+    filter: alpha(opacity=70); }
+ }
+
+ 
+.slider {
+  position: relative;
+
+}
+.slide {
+
+
+  display: none;
+  position: absolute;
+
+}
+.active-slide {
+    display: block;
+
 }
 
-a {
-    color: orange;
-    text-align: center;
-    font-family: "Times New Roman";
-    font-size: 20px;
-    horizontal-alignment: center;
+
+.arrow-prev {
+  margin-right:3em;
+  display: inline-block;
+  vertical-align: top;
+
+   margin-left:45%;
 }
 
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    text-align: center;
+.arrow-next {
+  margin-right: ;
+  display: inline-block;
+  vertical-align: top;
+  
+  margin-left:2%;
 }
