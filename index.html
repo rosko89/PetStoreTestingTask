@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+
 <title>PET STORE TASK</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
 <!-- Latest compiled and minified CSS -->
@@ -10,7 +11,7 @@
 </head>
 <body>
 <div class="center">
-<h1>PET STORE!!!</h1>
+<h1>PET STORE</h1>
 </div>
 </br>
 </br>
@@ -33,13 +34,81 @@
 
 
 <div class="jumbotron">
-<h2 style="text-align:center;">Welcome to our Pet Store , where everything is awesome</h2>
-<img src="http://thumbs.dreamstime.com/z/pet-store-visit-9547660.jpg" alt="image cannot be viewed" width="380" height="400" style="transform:translateX(85%)">
-</div>
-</div>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<h2 style="text-align:center;">Welcome to our Pet Store , where everything is awesome!!!</h2>
+<img src="img/pets.png">
+ <!-- <div class ="slides">
+    <div class="slide active-slide">
+     <img src="img/grumpyCat.jpg">
+     
+  </div>
+  
+   <div class="slide">
+       <img src="img/pug.jpg">
+     </div>
+      <div class="slide">
+	    <img src="img/fish.jpg">
+  </div>
+ 
+  </div>
+     <div class="slider-nav">
+      <a href="#" class="arrow-prev"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
+      
+      <a href="#" class="arrow-next"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
+    </div> 
+	<div>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </div>
+<script>
+var main = function() {
+  $('.dropdown-toggle').click(function() {
+    $('.dropdown-menu').toggle();
+  });
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  
+  $('.arrow-next').click(function() {
+    var currentSlide = $('.active-slide');
+    var nextSlide = currentSlide.next();
+
+    var currentDot = $('.active-dot');
+    var nextDot = currentDot.next();
+
+    if(nextSlide.length === 0) {
+      nextSlide = $('.slide').first();
+      nextDot = $('.dot').first();
+    }
+    
+    currentSlide.fadeOut(600).removeClass('active-slide');
+    nextSlide.fadeIn(600).addClass('active-slide');
+
+    currentDot.removeClass('active-dot');
+    nextDot.addClass('active-dot');
+  });
+
+
+  $('.arrow-prev').click(function() {
+    var currentSlide = $('.active-slide');
+    var prevSlide = currentSlide.prev();
+
+    var currentDot = $('.active-dot');
+    var prevDot = currentDot.prev();
+
+    if(prevSlide.length === 0) {
+      prevSlide = $('.slide').last();
+      prevDot = $('.dot').last();
+    }
+    
+    currentSlide.fadeOut(600).removeClass('active-slide');
+    prevSlide.fadeIn(600).addClass('active-slide');
+
+    currentDot.removeClass('active-dot');
+    prevDot.addClass('active-dot');
+  });
+
+}
+
+$(document).ready(main);
+</script>
+-->
 </body>
 </html>
