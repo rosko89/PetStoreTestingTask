@@ -5,15 +5,15 @@ background-color:pink;
 h1, h4, body{
    font-family: "Verdana", sans-serif; 
 }
-.well{
-background-color:pink;
-width:200px;
-transform:translate(200%,0);
+
+.panel-default > .panel-heading {
+    background-color: pink;
 }
-.well-sm {
-    padding: 0px;
-    border-radius: 4px;
-	}
+
+
+.panel{
+border-radius:4px;
+}
 
 a, a:hover, a:focus{
 color:white;
