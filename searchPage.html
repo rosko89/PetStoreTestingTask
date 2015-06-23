@@ -46,7 +46,7 @@
 
 				<!-- Search button -->
 				<!-- <div class="container"> -->
-					<button type="submit" class="btn btn-primary" style="background-color:pink">Search</button>
+					<button type="button" onclick="alert(getCheckedCheckboxesFor('filter'));" class="btn btn-primary" style="background-color:pink">Search</button>
 				<!-- </div> -->
 </div>
 			</br>
@@ -66,19 +66,19 @@
 					<!-- <div class="center"> -->
 
 						<div class="col-xs-3">
-							<input type="checkbox" name="filter" value="userTown" autocomplete="off"> User's Town
+							<input type="checkbox" name="filter" value="User's Town" autocomplete="off"> User's Town
 						</div>
 						
 						<div class="col-xs-3">
-							<input type="checkbox"  name="filter" value="ownerName" autocomplete="off"> Pet Owner's name
+							<input type="checkbox"  name="filter" value="Pet owner's name" autocomplete="off"> Pet Owner's name
 						</div>
 						
 						<div class="col-xs-3">
-							<input type="checkbox" autocomplete="off" name="filter" value="breed"> Pet Breed
+							<input type="checkbox" autocomplete="off" name="filter" value="Pet Breed"> Pet Breed
 						</div>
 						
 						<div class="col-xs-3">
-							<input type="checkbox" autocomplete="off" name="filter" value="birthday"> Pet Birthday 
+							<input type="checkbox" autocomplete="off" name="filter" value="Pet Birthday"> Pet Birthday 
 						</div>
 
 					<!-- </div> -->
@@ -100,31 +100,31 @@
 					<div class="row">
 
 						<div class="col-xs-2">
-							<input type="checkbox" autocomplete="off" name="filter" value="cat"> Cat
+							<input type="checkbox" autocomplete="off" name="filter" value="Cat"> Cat
 						</div>
 
 						<div class="col-xs-2">
-							<input type="checkbox" autocomplete="off" name="filter" value="dog"> Dog
+							<input type="checkbox" autocomplete="off" name="filter" value="Dog"> Dog
 						</div>
 
 						<div class="col-xs-2">
-							<input type="checkbox" autocomplete="off" name="filter" value="reptile"> Reptile
+							<input type="checkbox" autocomplete="off" name="filter" value="Reptile"> Reptile
 						</div>
 
 						<div class="col-xs-2">
-							<input type="checkbox" autocomplete="off" name="filter" value="fish"> Rodent
+							<input type="checkbox" autocomplete="off" name="filter" value="Fish"> Fish
 						</div>
 
 						<div class="col-xs-2">
-							<input type="checkbox" autocomplete="off" name="filter" value="insect"> Insect 
+							<input type="checkbox" autocomplete="off" name="filter" value="Insect"> Insect 
 						</div>
 
 						<div class="col-xs-2">
-							<input type="checkbox" autocomplete="off" name="filter" value="rodent"> Fish
+							<input type="checkbox" autocomplete="off" name="filter" value="Rodent"> Rodent
 						</div>
 
 						<div class="col-xs-2">
-							<input type="checkbox" autocomplete="off" name="filter" value="other"> Other
+							<input type="checkbox" autocomplete="off" name="filter" value="Other"> Other
 						</div>
 
 					</div>
@@ -147,15 +147,15 @@
 				<div class="row">
 
 				<div class="col-xs-4">
-					<input type="checkbox" autocomplete="off" name="filter" value="promotions"> News about promotions
+					<input type="checkbox" autocomplete="off" name="filter" value="News about promotions"> News about promotions
 				</div>
 
 				<div class="col-xs-4">
-					<input type="checkbox" autocomplete="off" name="filter" value="vaccinations"> Notification for vaccination 
+					<input type="checkbox" autocomplete="off" name="filter" value="Notification for vaccination"> Notification for vaccination 
 				</div>
 
 				<div class="col-xs-4">
-					<input type="checkbox" autocomplete="off" name="filter" value="specialOffers"> News about special offers
+					<input type="checkbox" autocomplete="off" name="filter" value="News about special offers"> News about special offers
 				</div>
 
 				</div>
@@ -179,6 +179,14 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script> 
+function getCheckedCheckboxesFor(checkboxName) {
+    var checkboxes = document.querySelectorAll(  'input[name="' + checkboxName + '"]:checked'), values = [];
+    Array.prototype.forEach.call(checkboxes, function(el) {
+        values.push(el.value);
+    });
+    return (" You have succesfully searched by :"+" "+ values);
+}</script>
 
 </form>
 </fieldset>
