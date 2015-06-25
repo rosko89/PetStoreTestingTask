@@ -8,6 +8,7 @@
 
 <link rel="stylesheet" href="userRegistration.css">
  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+ 
 
 
 <h1>PET STORE</h1>
@@ -39,7 +40,7 @@
 	<div class="form-group">
       <label for="usrName" class="col-lg-2 control-label">User name</label>
       <div class="col-lg-3">
-        <input class="form-control" id="username" placeholder="User name" type="text" name="username"  required pattern="^[a-z0-9_-]{2,16}$">
+        <input class="form-control" id="username" placeholder="User name" type="text" name="username"  required pattern="^[a-zA-Z0-9]{2,16}$">
       </div>
     </div>
 	<!--Email-->
@@ -47,7 +48,7 @@
       <label for="inputEmail" class="col-lg-2 control-label">Email</label>
       <div class="col-lg-3">
 	  
-        <input class="form-control" id="inputEmail" placeholder="Email" type="email" required>
+        <input class="form-control" id="inputEmail" placeholder="Email" type="email" required pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$">
       </div>
     </div>
 	<!--Password-->
@@ -60,15 +61,18 @@
 	    <div class="form-group">
       <label for="inputPassword" class="col-lg-2 control-label">Confirm password</label>
       <div class="col-lg-3">
-        <input class="form-control" id="pw2" placeholder="Confirm password" type="password"  name="pwd2" required pattern="^(?=^.{5,16}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$">
+        <input class="form-control" id="pw2" placeholder="Confirm password" type="password"  name="pwd2" required onkeyup="checkPasswordMatch();">
       </div>
     </div>
+	
+    <div class="registrationFormAlert" id="divCheckPasswordMatch">
+</div>
 	<!--Birth date-->
 
        <div class="form-group">
       <label for="inputPassword"  class="col-lg-2 control-label">Birthdate</label>
       <div class="col-lg-3">
-        <input class="form-control" type="date" id="datepicker" placeholder="Birthdate"  name="date" required>
+        <input class="form-control" type="date" id="datepicker" placeholder="Birthdate"  name="date" readonly="true" required>
       </div>
     </div>
 	
@@ -77,7 +81,7 @@
 		<div class="form-group">
       <label for="usrName" class="col-lg-2 control-label">Address</label>
       <div class="col-lg-3">
-        <input class="form-control" id="address" placeholder="Address" type="text" required pattern="^[a-zA-Z0-9](_(?!(\.|_))|\.(?!(_|\.))|[a-zA-Z0-9]){6,18}[a-zA-Z0-9]$">
+        <input class="form-control" id="address" placeholder="Address" type="text" required>
       </div>
     </div>
 	<!--Gender-->
@@ -140,13 +144,36 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script>
-  $(function() {
+/*$(function() {
     $( "#datepicker" ).datepicker({
       changeMonth: true,
 	  yearRange : "1940:2008",
       changeYear: true
     });
-  });
+  }); */
+
+function checkPasswordMatch() {
+    var password = $("#pw1").val();
+    var confirmPassword = $("#pw2").val();
+
+    if (password != confirmPassword)
+        $("#divCheckPasswordMatch").html("Passwords do not match!");
+    else
+        $("#divCheckPasswordMatch").html("Passwords match.");
+}
+
+$('#datepicker').datepicker({
+    yearRange: '1940:2008',
+    changeMonth: true,
+    changeYear:  true,
+    onSelect: function(dateText, inst) {
+              var d = new Date(dateText);
+              var selectedYear = d.setFullYear(parseInt($('.ui-datepicker-year :selected').text())); // selected year
+      //  console.log(startDate);
+        $('#datepicker').val([d.getMonth()+1, d.getDate(), d.getFullYear()].join('/'));
+        
+           }
+});
   </script>
 
 
