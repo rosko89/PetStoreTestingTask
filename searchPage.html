@@ -7,6 +7,7 @@
 <head>
 	<title>Search Page</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link href="https://bootswatch.com/darkly/bootstrap.css" rel="stylesheet">
 	<link href="searchPage.css" rel="stylesheet">
 </head>
@@ -41,12 +42,14 @@
 					<label class="control-label" for="enterKeyWord"><h4>Enter keyword</h4></label>
 				</div>
 				<div class="col-lg-5">
-					<input class="form-control" id="searchInput" placeholder="Search..." autocomplete="off" type="text" maxlength="255">
+					<input class="form-control" id="searchInput" placeholder="Search..." autocomplete="off" type="text" maxlength="255" name="searchFilter">
 				</div>
 
 				<!-- Search button -->
 				<!-- <div class="container"> -->
-					<button type="button" onclick="alert(getCheckedCheckboxesFor('filter'));" class="btn btn-primary" style="background-color:pink">Search</button>
+					<button type="submit" onclick="alert(getCheckedCheckboxesFor('searchFilter','filter'));" class="btn btn-primary" style="background-color:pink">
+					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					Search </button>
 				<!-- </div> -->
 </div>
 			</br>
@@ -180,13 +183,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script> 
-function getCheckedCheckboxesFor(checkboxName) {
+
+
+ function getCheckedCheckboxesFor(searchName, checkboxName) {
+ 	var searchField = document.querySelector('[name="searchFilter"]').value;
+ 	var searchBy = "by: " + searchField;
     var checkboxes = document.querySelectorAll(  'input[name="' + checkboxName + '"]:checked'), values = [];
     Array.prototype.forEach.call(checkboxes, function(el) {
         values.push(el.value);
     });
-    return (" You have succesfully searched by :"+" "+ values);
-}</script>
+    if (values[0] != null || searchField != ""){
+
+    	return (" You have succesfully searched"+""+" "+ searchBy +" "+ values);
+    }
+	else return (" You have succesfully searched!");
+<!-- 	http://www.w3schools.com/jsref/met_document_queryselector.asp -->
+	
+}</script> 
 
 </form>
 </fieldset>
