@@ -1,12 +1,4 @@
 <!doctype html>
-<!--
-Created using JS Bin
-http://jsbin.com
-
-Copyright (c) 2015 by anonymous (http://jsbin.com/hopohuzuvu/1/edit)
-
-Released under the MIT license: http://jsbin.mit-license.org
--->
 <meta name="robots" content="noindex">
 <html lang="en">
 <head>
@@ -29,7 +21,6 @@ Released under the MIT license: http://jsbin.mit-license.org
   <!-- Pet type // Pet breed -->
   <script>
   $(function() {
-
     $("#text-one").change(function() {
       $("#text-two").load("textdata/" + $(this).val() + ".txt");
     });
@@ -74,10 +65,8 @@ Released under the MIT license: http://jsbin.mit-license.org
         $.each(vals, function(index, value) {
           $jsontwo.append("<option>" + value + "</option>");
         });
-        
-      });
+        });
     });
-
 });
 $(function() {
   $( "#datepicker" ).datepicker({
@@ -87,125 +76,130 @@ $(function() {
   });
 });
 
+
 </script>
 
 </head>
 
 <body>
-  <div class="center">
-    <h1>PET STORE</h1>
-    <form class="form-horizontal">
+ 
+  <h1>PET STORE</h1>
+  <form class="form-horizontal">
 
-     <!-- navbar -->
-     <nav class="navbar" >
-      <div class="container-fluid">
-        <div class="navbar-header">   
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="container" >
+
+      <nav class="navbar" >
+        <div class="container-fluid">
           <ul class="nav navbar-nav">
-            <li><a href="index.html" style="color: White">Home</a></li>
-            <li class="active"> <a href="userRegistration.html" style="color: White">User Registration</a></li>
-            <li><a href="searchPage.html" style="color: White">Search Page</a></li>
+
+
           </div>
-        </div>
-      </nav>
-      <div class="container">
-        <div class="jumbotron">
-          <!-- Pet Name -->
-          <div class="form-group">
-            <label for="inputPetname" class="col-lg-3 control-label">Pet Name</label>
-            <div class="col-lg-3">
-              <input class="form-control" id="inputPetname" placeholder="Pet Name" required pattern="[a-zA-Z0-9]{2,16}$">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html" style="color: White">Home</a></li>
+              <li class="active"> <a href="userRegistration.html" style="color: White">User Registration</a></li>
+              <li><a href="searchPage.html" style="color: White">Search Page</a></li>
             </div>
           </div>
-          <!-- Pet type -->
-          <div class="form-group">
-            <label for="select" class="col-lg-3 control-label">Pet type</label>
-            <div class="col-lg-3">
-              <select class="form-control" id="json-one" required>
-                <option selected value="base">Please Select</option>
-                <option value="dog">Dog</option>
-                <option value="cat">Cat</option>
-                <option value="fish">Fish</option>
-                <option value="reptile">Reptile</option>
-                <option value="insect">insect</option>
-                <option value="rodent">Rodent</option>
-                <option value="other">Other</option>
-              </select>
+        </nav>
+        <div class="container">
+          <div class="jumbotron">
+            <!-- Pet Name -->
+            <div class="form-group">
+              <label for="inputPetname" class="col-lg-3 control-label">Pet Name</label>
+              <div class="col-lg-3">
+                <input class="form-control" id="inputPetname" placeholder="Pet Name" autocomplete="off" required pattern="[a-zA-Z0-9]{2,16}$">
+              </div>
             </div>
-          </div>
-          <!-- Pet Breed -->
-          <div class="form-group">
-            <label for="select" class="col-lg-3 control-label">Pet Breed</label>
-            <div class="col-lg-3">
-              <select class="form-control" id="json-two">
-                <option>Please choose from above</option>
-              </select>
+            <!-- Pet type -->
+            <div class="form-group">
+              <label for="select" class="col-lg-3 control-label">Pet type</label>
+              <div class="col-lg-3">
+                <select class="form-control" id="json-one" autocomplete="off" required>
+                  <option selected value="base">Please Select</option>
+                  <option value="dog">Dog</option>
+                  <option value="cat">Cat</option>
+                  <option value="fish">Fish</option>
+                  <option value="reptile">Reptile</option>
+                  <option value="insect">insect</option>
+                  <option value="rodent">Rodent</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
             </div>
-          </div>
-          <!-- Sub-options -->
-          <form>
-            <fieldset>
-              <label class="col-lg-3 control-label">Pet Gender</label>            
+            <!-- Pet Breed -->
+            <div class="form-group">
+              <label for="select" class="col-lg-3 control-label">Pet Breed</label>
+              <div class="col-lg-3">
+                <select class="form-control" id="json-two" autocomplete="off">
+                  <option>Please choose from above</option>
+                </select>
+              </div>
+            </div>
+            <!-- Sub-options -->
+            <form>
+              <fieldset>
+                <label class="col-lg-3 control-label">Pet Gender</label>            
+                <input type = "radio"
+                name = "radSize"
+                id = "sizeMale"
+                value = "Male"
+                checked = "checked" />
+                <label for = "sizeMale">Male</label>
+              </br>
               <input type = "radio"
               name = "radSize"
-              id = "sizeMale"
-              value = "Male"
-              checked = "checked" />
-              <label for = "sizeMale">Male</label>
-            </br>
-            <input type = "radio"
-            name = "radSize"
-            id = "sizeFemale"
-            value = "Female" />
-            <label for = "sizeFemale">Female</label>
-          </fieldset>     
-        </form>
-      </br>
-      <!-- Pet Owner -->
-      <div class="form-group">
-        <label for="inputPet Owner" class="col-lg-3 control-label">Pet Owner</label>
-        <div class="col-lg-3">
-          <input type="text" class="form-control" id="inputPet Owner" placeholder="Pet Owner" required pattern=".{2,16}$">
+              id = "sizeFemale"
+              value = "Female" />
+              <label for = "sizeFemale">Female</label>
+            </fieldset>     
+          </form>
+        </br>
+        <!-- Pet Owner -->
+        <div class="form-group">
+          <label for="inputPet Owner" class="col-lg-3 control-label">Pet Owner</label>
+          <div class="col-lg-3">
+            <input type="text" class="form-control" id="inputPet Owner" placeholder="Pet Owner" autocomplete="off" required pattern="[a-zA-Z0-9]{2,16}$">
+          </div>
         </div>
-      </div>
-      <!-- BrithDate -->
-      <div class="form-group">
-        <label for="BrithDate" class="col-lg-3 control-label">BrithDate</label>
-        <div class="col-lg-3">
-          <input class="form-control" id="datepicker" placeholder="BrithDate" required>
+        <!-- BrithDate -->
+        <div class="form-group">
+          <label for="BrithDate" class="col-lg-3 control-label">Brith Date</label>
+          <div class="col-lg-3">
+            <input class="form-control" id="datepicker" placeholder="Brith Date" readonly="true" autocomplete="off" required>
+          </div>
         </div>
-      </div>
-      <!-- Description -->
-      <div class="form-group">
-        <label for="textArea" class="col-lg-3 control-label">Description</label>
-        <div class="col-lg-3">
-          <textarea class="form-control" rows="3" id="textArea" placeholder="Description" maxlength="255"></textarea>
+        <!-- Description -->
+        <div class="form-group">
+          <label for="textArea" class="col-lg-3 control-label">Description</label>
+          <div class="col-lg-3">
+            <textarea class="form-control" rows="3" id="textArea" placeholder="Description" maxlength="255" autocomplete="off"></textarea>
+          </div>
         </div>
-      </div>
-      <!-- Color -->
-      <div class="form-group">
-        <label for="select" class="col-lg-3 control-label">Color</label>
-        <div class="col-lg-3">
-          <select class="form-control" id="select">
-            <option>Black</option>
-            <option>White</option>
-            <option>Yellow</option>
-            <option>Green</option>
-            <option>Blue</option>
-            <option>red</option>
-            <option>Pink</option>
-            <option>Purple</option>
-          </select>
-          <br>
+        <!-- Color -->
+        <div class="form-group">
+          <label for="select" class="col-lg-3 control-label">Color</label>
+          <div class="col-lg-3">
+            <select class="form-control" id="select" autocomplete="off">
+              <option selected value="base">Please Select</option>
+              <option>Black</option>
+              <option>White</option>
+              <option>Yellow</option>
+              <option>Green</option>
+              <option>Blue</option>
+              <option>red</option>
+              <option>Pink</option>
+              <option>Purple</option>
+            </select>
+            <br>
+          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <div class="col-lg-10 col-lg-offset-3">
-          <button type="submit" class="btn" style="background-color:pink;">Submit</button>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-3">
+            <button type="submit" class="btn" style="background-color:pink;">Submit</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-</html>
+  </body>
+  </html>
