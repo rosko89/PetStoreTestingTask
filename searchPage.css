@@ -28,3 +28,17 @@ border-color:pink;
 border-color:pink;
 background-color:pink;
 }
+
+
+img, img:hover, img:focus {
+    color: white;
+    display:inline-block;
+    width:15px;
+	height:15px;
+    *margin-right:.3em;
+    line-height:15px;
+    vertical-align:text-top;
+    *margin-left:0;
+	background-position: -68px 0 
+	}
+
