@@ -19,3 +19,8 @@ color:white;}
     background-position: right top;
     background-repeat: no-repeat;
   }
+  .active{
+ background-color:#303030;}
+ a, a:hover, a:focus{
+color:white !important; 
+}
