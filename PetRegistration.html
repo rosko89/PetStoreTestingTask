@@ -9,10 +9,129 @@
   <meta charset="UTF-8">
   <title>Pet Registration</title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
-  <!-- Birthdate -->
+
+</head>
+
+<body>
+ 
+  <h1>PET STORE</h1>
+  <form class="form-horizontal">
+
+    <div class="container" >
+
+      <nav class="navbar" >
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+
+
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html" style="color: White"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+              <li> <a href="userRegistration.html" style="color: White"> <span class="glyphicon glyphicon-user"></span> User Registration </a></li>
+              <li class="active"> <a href="petRegistration.html" style="background-color:#303030"> <span class="glyphicon glyphicon-apple"></span> Pet Registration </a></li>
+              <li><a href="searchPage.html" style="color: White"> <span class="glyphicon glyphicon-search"></span> Search Page</a></li>
+            </div>
+          </div>
+        </nav>
+        <div class="container">
+          <div class="jumbotron">
+            <!-- Pet Name -->
+            <div class="form-group">
+              <label for="inputPetname" class="col-lg-3 control-label">Pet Name</label>
+              <div class="col-lg-3">
+                <input class="form-control" id="inputPetname" placeholder="Pet Name" autocomplete="off" required pattern="[a-zA-Z0-9]{2,16}$">
+              </div>
+            </div>
+            <!-- Pet type -->
+            <div class="form-group">
+              <label for="select" class="col-lg-3 control-label">Pet type</label>
+              <div class="col-lg-3">
+                <select class="form-control" id="json-one" autocomplete="off" required>
+                  <option selected value="base">Please Select</option>
+                  <option value="dog">Dog</option>
+                  <option value="cat">Cat</option>
+                  <option value="fish">Fish</option>
+                  <option value="reptile">Reptile</option>
+                  <option value="insect">Insect</option>
+                  <option value="rodent">Rodent</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <!-- Pet Breed -->
+            <div class="form-group">
+              <label for="select" class="col-lg-3 control-label">Pet Breed</label>
+              <div class="col-lg-3">
+                <select class="form-control" id="json-two" autocomplete="off">
+                  <option>Please choose from above</option>
+                </select>
+              </div>
+            </div>
+            <!-- Radio Buttons -->
+            <form>
+              <fieldset>
+                <label class="col-lg-3 control-label">Pet Gender</label>            
+                <input type = "radio" name = "radSize" id = "Male" autocomplete="off"/>
+                <label for = "Male">Male</label>
+              </br>
+              <input type = "radio" name = "radSize" id = "Female" autocomplete="off" />
+              <label for = "Female">Female</label>
+            </fieldset>
+          </form>
+        </br>
+        <!-- Pet Owner -->
+        <div class="form-group">
+          <label for="inputPet Owner" class="col-lg-3 control-label">Pet Owner</label>
+          <div class="col-lg-3">
+            <input type="text" class="form-control" id="inputPet Owner" placeholder="Pet Owner" autocomplete="off" required pattern="[a-zA-Z0-9]{2,16}$">
+          </div>
+        </div>
+        <!-- BirthDate -->
+        <div class="form-group">
+          <label for="BrithDate" class="col-lg-3 control-label">Birth Date</label>
+          <div class="col-lg-3">
+            <input class="form-control" id="datepicker" placeholder="Brith Date" readonly="true" autocomplete="off" required>
+          </div>
+        </div>
+        <!-- Description -->
+        <div class="form-group">
+          <label for="textArea" class="col-lg-3 control-label">Description</label>
+          <div class="col-lg-3">
+            <textarea class="form-control" rows="3" id="textArea" placeholder="Description" maxlength="255" autocomplete="off"></textarea>
+          </div>
+        </div>
+        <!-- Color -->
+        <div class="form-group">
+          <label for="select" class="col-lg-3 control-label">Color</label>
+          <div class="col-lg-3">
+            <select class="form-control" id="select" autocomplete="off">
+              <option selected value="base">Please Select</option>
+              <option>Black</option>
+              <option>White</option>
+              <option>Yellow</option>
+              <option>Green</option>
+              <option>Blue</option>
+              <option>Red</option>
+              <option>Pink</option>
+              <option>Purple</option>
+            </select>
+            <br>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-3">
+            <button type="submit" class="btn" style="background-color:pink;">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  
+  <!-- Birth date -->
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
 
@@ -79,123 +198,6 @@ $(function() {
 
 
 </script>
-
-</head>
-
-<body>
- 
-  <h1>PET STORE</h1>
-  <form class="form-horizontal">
-
-    <div class="container" >
-
-      <nav class="navbar" >
-        <div class="container-fluid">
-          <ul class="nav navbar-nav">
-
-
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li><a href="index.html" style="color: White"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-              <li class="active"> <a href="userRegistration.html" style="color: White"> <span class="glyphicon glyphicon-user"></span> User Registration </a></li>
-              <li class="active"> <a href="petRegistration.html" style="color: White"> <span class="glyphicon glyphicon-apple"></span> Pet Registration </a></li>
-              <li><a href="searchPage.html" style="color: White"> <span class="glyphicon glyphicon-search"></span> Search Page</a></li>
-            </div>
-          </div>
-        </nav>
-        <div class="container">
-          <div class="jumbotron">
-            <!-- Pet Name -->
-            <div class="form-group">
-              <label for="inputPetname" class="col-lg-3 control-label">Pet Name</label>
-              <div class="col-lg-3">
-                <input class="form-control" id="inputPetname" placeholder="Pet Name" autocomplete="off" required pattern="[a-zA-Z0-9]{2,16}$">
-              </div>
-            </div>
-            <!-- Pet type -->
-            <div class="form-group">
-              <label for="select" class="col-lg-3 control-label">Pet type</label>
-              <div class="col-lg-3">
-                <select class="form-control" id="json-one" autocomplete="off" required>
-                  <option selected value="base">Please Select</option>
-                  <option value="dog">Dog</option>
-                  <option value="cat">Cat</option>
-                  <option value="fish">Fish</option>
-                  <option value="reptile">Reptile</option>
-                  <option value="insect">Insect</option>
-                  <option value="rodent">Rodent</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
-            <!-- Pet Breed -->
-            <div class="form-group">
-              <label for="select" class="col-lg-3 control-label">Pet Breed</label>
-              <div class="col-lg-3">
-                <select class="form-control" id="json-two" autocomplete="off">
-                  <option>Please choose from above</option>
-                </select>
-              </div>
-            </div>
-            <!-- Radio Buttons -->
-            <form>
-              <fieldset>
-                <label class="col-lg-3 control-label">Pet Gender</label>            
-                <input type = "radio" name = "radSize" id = "Male" autocomplete="off"/>
-                <label for = "Male">Male</label>
-              </br>
-              <input type = "radio" name = "radSize" id = "Female" autocomplete="off" />
-              <label for = "Female">Female</label>
-            </fieldset>
-          </form>
-        </br>
-        <!-- Pet Owner -->
-        <div class="form-group">
-          <label for="inputPet Owner" class="col-lg-3 control-label">Pet Owner</label>
-          <div class="col-lg-3">
-            <input type="text" class="form-control" id="inputPet Owner" placeholder="Pet Owner" autocomplete="off" required pattern="[a-zA-Z0-9]{2,16}$">
-          </div>
-        </div>
-        <!-- BrithDate -->
-        <div class="form-group">
-          <label for="BrithDate" class="col-lg-3 control-label">Brith Date</label>
-          <div class="col-lg-3">
-            <input class="form-control" id="datepicker" placeholder="Brith Date" readonly="true" autocomplete="off" required>
-          </div>
-        </div>
-        <!-- Description -->
-        <div class="form-group">
-          <label for="textArea" class="col-lg-3 control-label">Description</label>
-          <div class="col-lg-3">
-            <textarea class="form-control" rows="3" id="textArea" placeholder="Description" maxlength="255" autocomplete="off"></textarea>
-          </div>
-        </div>
-        <!-- Color -->
-        <div class="form-group">
-          <label for="select" class="col-lg-3 control-label">Color</label>
-          <div class="col-lg-3">
-            <select class="form-control" id="select" autocomplete="off">
-              <option selected value="base">Please Select</option>
-              <option>Black</option>
-              <option>White</option>
-              <option>Yellow</option>
-              <option>Green</option>
-              <option>Blue</option>
-              <option>Red</option>
-              <option>Pink</option>
-              <option>Purple</option>
-            </select>
-            <br>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-lg-10 col-lg-offset-3">
-            <button type="submit" class="btn" style="background-color:pink;">Submit</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </body>
   </html>
   
