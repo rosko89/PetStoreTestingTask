@@ -73,7 +73,7 @@
        <div class="form-group">
       <label for="inputPassword"  class="col-lg-2 control-label">Birthdate</label>
       <div class="col-lg-3">
-        <input class="form-control" type="date" id="datepicker" placeholder="Birthdate"  name="date" readonly="true" required>
+        <input class="form-control"  id="datepicker" placeholder="Birthdate"  name="date" readonly="true" required>
       </div>
     </div>
 	
@@ -145,14 +145,6 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script>
-/*$(function() {
-    $( "#datepicker" ).datepicker({
-      changeMonth: true,
-	  yearRange : "1940:2008",
-      changeYear: true
-    });
-  }); */
-
 function checkPasswordMatch() {
     var password = $("#pw1").val();
     var confirmPassword = $("#pw2").val();
@@ -163,17 +155,12 @@ function checkPasswordMatch() {
         $("#divCheckPasswordMatch").html("Passwords match.");
 }
 
-$('#datepicker').datepicker({
-    yearRange: '1940:2008',
+$(function() {
+  $( "#datepicker" ).datepicker({
     changeMonth: true,
-    changeYear:  true,
-    onSelect: function(dateText, inst) {
-              var d = new Date(dateText);
-              var selectedYear = d.setFullYear(parseInt($('.ui-datepicker-year :selected').text())); // selected year
-      //  console.log(startDate);
-        $('#datepicker').val([d.getMonth()+1, d.getDate(), d.getFullYear()].join('/'));
-        
-           }
+    yearRange:"1995:",
+    changeYear: true
+  });
 });
   </script>
 
