@@ -23,3 +23,6 @@ font-family:"Verdana", sans-serif;
 
 }
 h1{text-align: center}
+a, a:hover, a:focus{
+color:white;
+}
